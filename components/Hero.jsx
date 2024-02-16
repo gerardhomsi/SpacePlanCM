@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="relative h-full">
       <video autoPlay loop muted className="absolute inset-0 object-cover w-full h-full">
         <source
-          src="https://firebasestorage.googleapis.com/v0/b/spaceplancm.appspot.com/o/website%20pics%2FheroVideo.mp4?alt=media&token=1d92782f-b191-44b2-b783-54031602bf9f"
+          src={`https://firebasestorage.googleapis.com/v0/b/spaceplancm.appspot.com/o/website%20pics%2FheroVideo.mp4?alt=media&token=${process.env.FIRE_BASE_TOKEN}`}
           type="video/mp4"
         />
         Your browser does not support the video tag.
