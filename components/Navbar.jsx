@@ -61,10 +61,13 @@ const Navbar = () => {
           About
         </Link>
         <Link className={linkHover} href={"/"}>
+          Projects
+        </Link>
+        <Link className={linkHover} href={"/"}>
           Services
         </Link>
         <Link className={linkHover} href={"/"}>
-          Projects
+          Team
         </Link>
         <Link className={linkHover} href={"/"}>
           Contact

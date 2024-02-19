@@ -18,7 +18,7 @@ body {
 }
 
 .secondaryColor {
-  @apply text-[#cd9a41];
+  @apply text-[#c0873d];
 }
 
 .linkHover:hover {

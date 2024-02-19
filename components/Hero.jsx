@@ -15,7 +15,7 @@ const Hero = () => {
 
       <div className="secondaryColor relative flex flex-col items-center justify-between font-medium h-full">
         <div className="sm:flex">
-          <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[8rem] my-10 text-center sm:flex sm:flex-col sm:items-center text-[#cd9a41] titleShadow leading-tight">
+          <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[8rem] my-10 text-center sm:flex sm:flex-col sm:items-center text-[#c0873d] titleShadow leading-tight">
             <p>constructing with</p>
             <p>honesty</p>
             <p> & </p>
