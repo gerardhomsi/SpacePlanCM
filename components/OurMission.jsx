@@ -6,10 +6,10 @@ const OurMission = () => {
 
   return (
     <section className="sectionPadding h-full flex flex-col items-center md:flex md:flex-col gap-20">
-      <h1 className="underline underline-offset-8 decoration-2 text-[4rem] md:text-[6rem] decoration-[#cd9a41] text-center whitespace-nowrap md:mb-20">Our Mission</h1>
+      <h1 className="underline underline-offset-8 decoration-2 text-[4rem] md:text-[6rem] decoration-[#cd9a41] text-center whitespace-nowrap md:mb-20 textShadow">Our Mission</h1>
       <div className={`${flexCenterBetweenLeadingTight}`}>
         <div className="border-l-2 border-[#cd9a41]">
-          <h2 className="pl-2 text-left md:-mt-3 text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[7rem] titleShadow">
+          <h2 className="pl-2 text-left md:-mt-3 text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[7rem] textShadow">
             IMAGINE.
             <p className="text-sm lg:text-lg -mt-4 md:-mt-5 lg:-mt-7 xl:-mt-9 md:whitespace-nowrap italic secondaryColor">Transforming Visions into Blueprints.</p>
           </h2>
@@ -23,7 +23,7 @@ const OurMission = () => {
       </div>
       <div className={`${flexCenterBetweenLeadingTight}`}>
         <div className="border-l-2 border-[#cd9a41] xl:-ml-1">
-          <h2 className="pl-2 text-left md:-mt-3 text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem] titleShadow">
+          <h2 className="pl-2 text-left md:-mt-3 text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem] textShadow">
             PLAN.
             <p className="text-sm lg:text-lg -mt-4 md:-mt-5 lg:-mt-7 xl:-mt-9 md:whitespace-nowrap italic secondaryColor">Precision in Strategy, Clarity in Execution.</p>
           </h2>
@@ -37,7 +37,7 @@ const OurMission = () => {
       </div>
       <div className={`${flexCenterBetweenLeadingTight}`}>
         <div className="border-l-2 border-[#cd9a41] xl:-ml-1">
-          <h2 className="pl-2 text-left md:-mt-3 text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem] titleShadow">
+          <h2 className="pl-2 text-left md:-mt-3 text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[8rem] textShadow">
             BUILD.
             <p className="text-sm lg:text-lg -mt-4 md:-mt-5 lg:-mt-7 xl:-mt-9 md:whitespace-nowrap italic secondaryColor">Crafting Dreams into Concrete Realities.</p>
           </h2>

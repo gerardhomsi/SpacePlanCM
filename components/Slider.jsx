@@ -68,14 +68,14 @@ export default function Page() {
   };
 
   return (
-    <section className="bg-blue-950 py-12 px-4 sm:px-6 md:px-10 sm:sectionPadding flex flex-col items-center gap-6 w-full">
-      <h2 className="text-[6rem] text-white">PROJECTS</h2>
+    <section className="bg-blue-950 py-12 px-4 sm:px-6 md:px-10 sm:sectionPadding flex flex-col items-center gap-6 w-full h-full">
+      <h2 className="text-[6rem] text-white underline underline-offset-8 decoration-2 decoration-[#cd9a41] textShadow">PROJECTS</h2>
       <div className="w-11/12">
         <Swiper
           loop={true}
           spaceBetween={10}
-          // pagination={true}
-          navigation={true}
+          // navigation={true}
+          pagination={true}
           thumbs={{
             swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
           }}
@@ -86,18 +86,22 @@ export default function Page() {
           {projects.map((image, index) => (
             <SwiperSlide key={index}>
               {index === selectedProjectIndex && (
-                <div className="absolute bottom-0 h-full left-auto w-1/3 bg-blue-950 bg-opacity-70 flex flex-col text-amber-500">
-                  <h1 className="font-bold mb-2 text-center text-[1.2rem] sm:text-[2.5rem] lg:text-[4.3rem] xl:text-[5.5rem]">{projects[selectedProjectIndex].title}</h1>
-                  <p className="text-sm px-6 py-2">{projects[selectedProjectIndex].address}</p>
-                  <ul className="text-sm px-6 py-2">
+                <div className="absolute h-full w-1/2 px-4 bg-blue-950 bg-opacity-70 flex flex-col text-amber-500">
+                  <h1 className="font-bold text-center text-[1.2rem] sm:text-[2.5rem] lg:text-[4.3rem] xl:text-[5.5rem] text-white whitespace-nowrap">
+                    {projects[selectedProjectIndex].title}
+                  </h1>
+                  <p className="text-[0.7rem] sm:text-[1rem] md:text-[1.2rem] mb-2 sm:px-4 sm:py-2">-{projects[selectedProjectIndex].address}</p>
+                  <ul className="text-[0.7rem] sm:text-[1rem] md:text-[1.2rem] sm:px-4 sm:py-2">
                     {projects[selectedProjectIndex].tags.map((tag, tagIndex) => (
-                      <li key={tagIndex}>{tag}</li>
+                      <li key={tagIndex} className="mb-2">
+                        -{tag}
+                      </li>
                     ))}
                   </ul>
                 </div>
               )}
               <div className="w-full h-[14rem] sm:h-[26rem] md:h-[29rem] lg:h-[34rem] xl:h-[40rem]">
-                <Image src={image.imageUrl} alt={image.title} className="object-scale-down" />
+                <Image src={image.imageUrl} alt={image.title} className="object-cover" />
               </div>
             </SwiperSlide>
           ))}

@@ -14,8 +14,8 @@ const Hero = () => {
       </video>
 
       <div className="secondaryColor relative flex flex-col items-center justify-between font-medium h-full">
-        <div className="sm:flex">
-          <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[8rem] my-10 text-center sm:flex sm:flex-col sm:items-center text-[#c0873d] titleShadow leading-tight">
+        <div className="h-screen flex items-center">
+          <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[5rem] my-10 text-center sm:flex sm:flex-col sm:items-center text-slate-200 titleShadow leading-tight">
             <p>constructing with</p>
             <p>honesty</p>
             <p> & </p>
@@ -25,11 +25,11 @@ const Hero = () => {
         <div className="flex flex-col justify-center ml-auto">
           <div className="flex items-center mb-2">
             <HiOutlinePhone className="mr-2 text-white" />
-            <p className="font-semibold">: 713 209-0009</p>
+            <p className="font-semibold pr-4">: 713 209-0009</p>
           </div>
           <div className="flex items-center">
             <TfiEmail className="mr-2 text-white" />
-            <p className="font-semibold">: El-Zabringo@hotmail.com</p>
+            <p className="font-semibold pr-4">: El-Zabringo@hotmail.com</p>
           </div>
         </div>
       </div>
