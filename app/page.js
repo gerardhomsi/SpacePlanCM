@@ -1,3 +1,4 @@
+import ContactUs from "@/components/ContactUs";
 import Hero from "@/components/Hero";
 import OurMission from "@/components/OurMission";
 import Services from "@/components/Services";
@@ -9,9 +10,10 @@ export default function Home() {
     <main>
       <Hero />
       <OurMission />
-      <Slider />
-      <Services />
       <Team />
+      <Services />
+      <Slider />
+      <ContactUs />
     </main>
   );
 }

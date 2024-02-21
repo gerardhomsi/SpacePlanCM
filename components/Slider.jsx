@@ -68,7 +68,7 @@ export default function Page() {
   };
 
   return (
-    <section className="bg-blue-950 py-12 px-4 sm:px-6 md:px-10 sm:sectionPadding flex flex-col items-center gap-6 w-full h-full">
+    <section className="gradientBlue py-12 px-4 sm:px-6 md:px-10 sm:sectionPadding flex flex-col items-center gap-6 w-full h-full border-b-4 border-t-4 border-[#cd9a41]">
       <h2 className="text-[6rem] text-white underline underline-offset-8 decoration-2 decoration-[#cd9a41] textShadow">PROJECTS</h2>
       <div className="w-11/12">
         <Swiper
@@ -129,7 +129,7 @@ export default function Page() {
       </div>
       <Link
         href={""}
-        className="max-w-sm whitespace-nowrap transition text-white text-center p-2 border-r-2 border-r-[#cd9a41] border-l-2 border-l-[#cd9a41] hover:border-2 hover:border-[#cd9a41] hover:w-64 rounded mx-auto"
+        className="max-w-sm whitespace-nowrap transition my-6 text-white text-center p-2 border-r-2 border-r-[#cd9a41] border-l-2 border-l-[#cd9a41] hover:border-2 hover:border-[#cd9a41] hover:w-64 hover:transition rounded mx-auto"
       >
         ---------- VIEW GALLERY ----------
       </Link>

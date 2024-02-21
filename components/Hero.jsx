@@ -4,7 +4,7 @@ import { TfiEmail } from "react-icons/tfi";
 
 const Hero = () => {
   return (
-    <section className="relative h-full">
+    <section className="relative h-full border-b-4 border-[#cd9a41]">
       <video autoPlay loop muted className="absolute inset-0 object-cover w-full h-full">
         <source
           src={`https://firebasestorage.googleapis.com/v0/b/spaceplancm.appspot.com/o/website%20pics%2FheroVideo.mp4?alt=media&token=${process.env.FIRE_BASE_TOKEN}`}
