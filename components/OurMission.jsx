@@ -49,7 +49,7 @@ const OurMission = () => {
   ];
 
   return (
-    <section className="p-8 h-full flex flex-col items-center md:flex md:flex-col gap-28 gradientLight border-t-4 border-[#cd9a41]">
+    <section className="p-8 lg:px-24 xl:px-32 h-full flex flex-col items-center md:flex md:flex-col gap-28 gradientLight border-t-4 border-[#cd9a41]">
       <h1 className="underline underline-offset-8 decoration-2 text-[3.5rem] sm:text-[4rem] md:text-[6rem] decoration-[#cd9a41] text-center whitespace-nowrap md:mb-20 textShadow">
         Our Mission
       </h1>
