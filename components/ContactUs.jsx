@@ -2,6 +2,7 @@
 
 import { sendEmail } from "@/actions/sendEmail";
 import React, { useState } from "react";
+import CustomLink from "./CustomLink";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="w-full text-center flex flex-col items-center justify-center primaryColor py-10 sm:p-10 white-gradient">
+    <section id="contact" className="w-full text-center flex flex-col items-center justify-center py-10 sm:p-10 gradientLight">
       <h2 className="text-[3.5rem] sm:text-[6rem] text-center underline underline-offset-8 decoration-2 decoration-[#cd9a41] textShadow">CONTACT US</h2>
       <h2 className="primaryColor flex flex-col gap-2">
         Please contact Us directly at:
@@ -39,7 +40,7 @@ const ContactUs = () => {
 
       <form className="mt-10 flex flex-col w-2/3 sm:w-1/2 lg:w-2/5 normal-case" onSubmit={handleSubmit}>
         <input
-          className="h-14 px-4 mb-3 rounded-lg transition-all bg-[#cd9a41] placeholder-[#032e83]"
+          className="h-14 px-4 mb-3 rounded-lg transition-all bg-gray-200 placeholder-[#032e83]"
           name="senderName"
           type="string"
           required
@@ -49,7 +50,7 @@ const ContactUs = () => {
           onChange={handleChange}
         />
         <input
-          className="h-14 px-4 rounded-lg transition-all bg-[#cd9a41] placeholder-[#032e83]"
+          className="h-14 px-4 rounded-lg transition-all bg-gray-200 placeholder-[#032e83]"
           name="senderEmail"
           type="email"
           required
@@ -59,7 +60,7 @@ const ContactUs = () => {
           onChange={handleChange}
         />
         <textarea
-          className="h-52 my-3 rounded-lg border p-4 transition-all bg-[#cd9a41] placeholder-[#032e83]"
+          className="h-52 my-3 rounded-lg border p-4 transition-all bg-gray-200 placeholder-[#032e83]"
           name="message"
           placeholder="Your message"
           required
@@ -67,12 +68,7 @@ const ContactUs = () => {
           value={formData.message}
           onChange={handleChange}
         />
-        <button
-          type="submit"
-          className="w-2/5 whitespace-nowrap transition-all text-center p-2 border-r-2 border-r-[#cd9a41] border-l-2 border-l-[#cd9a41] hover:border-2 hover:border-[#cd9a41] hover:w-1/3 rounded mt-6 mx-auto"
-        >
-          ------ SUBMIT ------
-        </button>
+        <CustomLink href={""} linkName="SUBMIT" />
       </form>
     </section>
   );

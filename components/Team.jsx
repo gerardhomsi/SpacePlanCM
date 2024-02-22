@@ -34,12 +34,17 @@ const Team = () => {
       <h2 className="text-white underline underline-offset-8 decoration-2 text-[4rem] md:text-[6rem] decoration-[#cd9a41] text-center whitespace-nowrap md:mb-20 textShadow">
         TEAM
       </h2>
-      <div className="grid md:grid-col-1 lg:grid-cols-3 gap-10 mb-10 place-items-center justify-items-stretch rounded-lg sm:sectionPadding w-full whitespace-nowrap">
+      <div className="grid md:grid-col-1 lg:grid-cols-3 gap-4 mb-10 place-items-center justify-items-stretch rounded-lg sm:sectionPadding w-full whitespace-nowrap">
         {team.map((member, index) => (
-          <div key={index} className="flex flex-col items-center justify-between secondaryColor lg:border-l-2 truncate h-full text-center">
+          <div
+            key={index}
+            className={`flex flex-col items-center justify-between secondaryColor w-2/3 mx-auto lg:w-full lg:border-b-0 truncate h-full text-center ${
+              index === 0 ? "lg:border-l-0" : "lg:border-l-2"
+            } ${index === 2 ? "border-b-0" : "border-b-2 "}`}
+          >
             <Image src={member.image} width={300} height={100} alt="team" className="rounded-full pl-2" />
-            <div className="flex flex-col items-center w-2/3 md:w-1/3 lg:w-2/3 ">
-              <h2 className="text-[3rem] pl-2">{member.name}</h2>
+            <div className="flex flex-col items-center mb-5 w-full lg:w-2/3">
+              <h2 className="text-[2rem] sm:text-[2.5rem] w-full">{member.name}</h2>
               <p className="text-white text-[1.5rem] mb-4">{member.role}</p>
               <p className="whitespace-break-spaces">{member.bio}</p>
             </div>

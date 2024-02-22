@@ -4,20 +4,21 @@ import imagineIcon from "../public/imagineIcon.png";
 import planIcon from "../public/planIcon.png";
 import buildIcon from "../public/buildIcon.png";
 import Image from "next/image";
+import CustomLink from "./CustomLink";
 
 const MissionStep = ({ title, subtitle, content, icon, isSpecial, thirdService }) => (
-  <div className={`flex flex-col gap-10 md:flex-row md:items-center md:gap-16 leading-tight w-full `}>
-    <div className="border-l-2 border-[#cd9a41]">
-      <h2 className="pl-2 text-left md:-mt-3 text-[3rem] sm:text-[4rem] lg:text-[6rem] xl:text-[7rem] textShadow">
+  <div className={`flex flex-col gap-10 md:flex-row md:items-center md:justify-between md:gap-16 leading-tight w-full`}>
+    <div className="border-l-2 border-[#cd9a41] md:max-w-[34%]">
+      <h2 className="pl-2 text-left md:-mt-3 text-[3rem] sm:text-[3rem] lg:text-[4rem] xl:text-[6rem] textShadow font-semibold">
         {title}
-        <p className="text-sm lg:text-lg -mt-4 md:-mt-5 lg:-mt-7 xl:-mt-9 md:whitespace-nowrap italic secondaryColor">{subtitle}</p>
+        <p className="text-[1rem] md:-mt-2 lg:-mt-5 xl:-mt-6 italic secondaryColor font-medium">{subtitle}</p>
       </h2>
     </div>
-    <div className={`w-full flex items-center justify-start sm:justify-center md:justify-center lg:justify-center`}>
-      <Image src={icon} width={120} height={0} alt="icon" className={`${thirdService ? "xl:ml-6" : ""}`} />
+    <div className={`flex items-center justify-start sm:justify-center max-w-[34%]`}>
+      <Image src={icon} width={120} height={0} alt="icon" className={``} />
     </div>
-    <div className={`max-w-sm`}>
-      <h3 className="pl-2 border-l-2 border-[#cd9a41]">{content}</h3>
+    <div className={`md:max-w-[34%]`}>
+      <h3 className="pl-2 border-l-2 text-[0.9rem] lg:text-[1.2rem] border-[#cd9a41] font-medium leading-7">{content}</h3>
     </div>
   </div>
 );
@@ -25,7 +26,7 @@ const MissionStep = ({ title, subtitle, content, icon, isSpecial, thirdService }
 const OurMission = () => {
   const missionSteps = [
     {
-      title: "IMAGINE.",
+      title: "DREAM.",
       subtitle: "Transforming Visions into Blueprints.",
       icon: imagineIcon,
       content:
@@ -48,17 +49,14 @@ const OurMission = () => {
   ];
 
   return (
-    <section className="sectionPadding h-full flex flex-col items-center md:flex md:flex-col gap-28 gradientLight">
-      <h1 className="underline underline-offset-8 decoration-2 text-[4rem] md:text-[6rem] decoration-[#cd9a41] text-center whitespace-nowrap md:mb-20 textShadow">Our Mission</h1>
+    <section className="p-8 h-full flex flex-col items-center md:flex md:flex-col gap-28 gradientLight border-t-4 border-[#cd9a41]">
+      <h1 className="underline underline-offset-8 decoration-2 text-[3.5rem] sm:text-[4rem] md:text-[6rem] decoration-[#cd9a41] text-center whitespace-nowrap md:mb-20 textShadow">
+        Our Mission
+      </h1>
       {missionSteps.map((step, index) => (
         <MissionStep key={index} {...step} isSpecial={index === 1} thirdService={index === 2} />
       ))}
-      <Link
-        href={""}
-        className="max-w-sm whitespace-nowrap transition-all text-center p-2 border-r-2 border-r-[#cd9a41] border-l-2 border-l-[#cd9a41] hover:border-2 hover:border-[#cd9a41] hover:w-64 rounded mx-auto"
-      >
-        ---------- READ OUR STORY ----------
-      </Link>
+      <CustomLink href={""} linkName={"View Our Story"} />
     </section>
   );
 };

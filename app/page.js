@@ -1,3 +1,4 @@
+import About from "@/components/About";
 import ContactUs from "@/components/ContactUs";
 import Hero from "@/components/Hero";
 import OurMission from "@/components/OurMission";
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <About />
       <OurMission />
       <Team />
       <Services />
