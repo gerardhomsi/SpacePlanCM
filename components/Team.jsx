@@ -30,7 +30,7 @@ const Team = () => {
   ];
 
   return (
-    <section className="py-8 gradientBlue flex flex-col justify-between items-center gap-28 border-b-4 border-t-4 border-[#cd9a41]">
+    <section id="team" className="py-8 gradientBlue flex flex-col justify-between items-center gap-28 border-b-4 border-t-4 border-[#cd9a41]">
       <h2 className="text-white underline underline-offset-8 decoration-2 text-[4rem] md:text-[6rem] decoration-[#cd9a41] text-center whitespace-nowrap md:mb-20 textShadow">
         TEAM
       </h2>

@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
-const CustomLink = ({ href, linkName, customCss }) => {
+export const CustomLink = ({ href, linkName, customCss }) => {
   return (
     <Link
       href={href}
@@ -11,4 +12,20 @@ const CustomLink = ({ href, linkName, customCss }) => {
   );
 };
 
-export default CustomLink;
+export const ServiceLink = ({ href, serviceName, directionLeft = false, customCss }) => (
+  <div className={`group border-2 border-[#cd9a41] rounded-md px-4 py-2 hover:bg-blue-950 max-w-[14rem] hover:text-[#cd9a41] ${customCss}`}>
+    <Link href={href} className="flex items-center justify-evenly gap-2">
+      {directionLeft ? (
+        <>
+          <BsArrowLeft className="transition-transform duration-300 ease-in-out group-hover:-translate-x-2 text-center" />
+          <span>{serviceName}</span>{" "}
+        </>
+      ) : (
+        <>
+          <span>{serviceName}</span>
+          <BsArrowRight className="transition-transform duration-300 ease-in-out group-hover:translate-x-2" />
+        </>
+      )}
+    </Link>
+  </div>
+);

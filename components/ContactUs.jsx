@@ -2,7 +2,7 @@
 
 import { sendEmail } from "@/actions/sendEmail";
 import React, { useState } from "react";
-import CustomLink from "./CustomLink";
+import { CustomLink } from "./CustomLink";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({

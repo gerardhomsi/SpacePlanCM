@@ -19,7 +19,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
 import Link from "next/link";
-import CustomLink from "./CustomLink";
+import { CustomLink } from "./CustomLink";
 
 export default function Page() {
   const projects = [
@@ -69,7 +69,10 @@ export default function Page() {
   };
 
   return (
-    <section className="gradientBlue py-12 px-4 sm:px-6 md:px-10 sm:sectionPadding flex flex-col items-center gap-6 w-full h-full border-b-4 border-t-4 border-[#cd9a41]">
+    <section
+      id="projects"
+      className="gradientBlue py-12 px-4 sm:px-6 md:px-10 sm:sectionPadding flex flex-col items-center gap-6 w-full h-full border-b-4 border-t-4 border-[#cd9a41]"
+    >
       <h2 className="text-[3.5rem] sm:text-[4rem] text-white underline underline-offset-8 decoration-2 decoration-[#cd9a41] textShadow">PROJECTS</h2>
       <div className="w-11/12">
         <Swiper
@@ -128,7 +131,7 @@ export default function Page() {
           ))}
         </Swiper>
       </div>
-      <CustomLink href={""} linkName={"View Gallery"} customCss={"text-white"} />
+      <CustomLink href={"/gallery"} linkName={"View Gallery"} customCss={"text-white"} />
     </section>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { HiOutlinePhone } from "react-icons/hi2";
 import { TfiEmail } from "react-icons/tfi";
 import { introVideo } from "@/lib/links";
-import CustomLink from "./CustomLink";
+import { CustomLink } from "./CustomLink";
 
 const Hero = () => {
   // document.querySelector("#contact").scrollIntoView({
@@ -18,10 +18,11 @@ const Hero = () => {
       <div className="secondaryColor relative flex flex-col items-center justify-between font-medium h-full">
         <div className="h-screen flex items-center">
           <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[5rem] my-10 text-center sm:flex sm:flex-col sm:items-center text-slate-200 titleShadow leading-tight">
-            <p>constructing with</p>
-            <p>honesty</p>
-            <p> & </p>
-            <p>perspective</p>
+            <span className="block">CONSTRUCTING</span>
+            <span className="block">WITH</span>
+            <span className="block">INTEGRITY </span>
+            <span className="block">&</span>
+            <span className="block">INSIGHT</span>
           </h1>
         </div>
         <div className="flex flex-col justify-center ml-auto">

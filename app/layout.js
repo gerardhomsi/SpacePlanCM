@@ -3,6 +3,7 @@ import { Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ScrollToTopButton from "@/components/ScrollToTop";
 
 const ptSerif = Source_Serif_4({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         {children}
+        <ScrollToTopButton />
         <Footer />
       </body>
     </html>

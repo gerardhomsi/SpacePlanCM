@@ -4,7 +4,7 @@ import imagineIcon from "../public/imagineIcon.png";
 import planIcon from "../public/planIcon.png";
 import buildIcon from "../public/buildIcon.png";
 import Image from "next/image";
-import CustomLink from "./CustomLink";
+import { CustomLink } from "./CustomLink";
 
 const MissionStep = ({ title, subtitle, content, icon, isSpecial, thirdService }) => (
   <div className={`flex flex-col gap-10 md:flex-row md:items-center md:justify-between md:gap-16 leading-tight w-full`}>

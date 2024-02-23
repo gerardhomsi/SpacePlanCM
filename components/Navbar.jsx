@@ -37,7 +37,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="flex sm:flex-row items-center gap-6 border-b-4 p-3 border-[#cd9a41] font-medium ">
+    <div className="flex sm:flex-row items-center gap-6 border-b-4 p-3 border-[#cd9a41] font-medium gradientLight">
       <div className="h-full">
         <Image
           src="https://firebasestorage.googleapis.com/v0/b/spaceplancm.appspot.com/o/website%20pics%2Fspbanner.png?alt=media&token=bb485cfa-e250-4a9c-a338-3087e2054c06"
@@ -58,18 +58,21 @@ const Navbar = () => {
         className={`flex gap-1 primaryColor sm:flex sm:flex-row sm:gap-3 sm:ml-auto md:gap-6 lg:gap-12 xl:gap-16 ${isOpen ? "block flex-col" : "hidden sm:block"}`}
       >
         <Link href={"/"} className={linkHover}>
+          Home
+        </Link>
+        <Link href={"/#about"} className={linkHover}>
           About
         </Link>
-        <Link className={linkHover} href={"/"}>
+        <Link className={linkHover} href={"/#projects"}>
           Projects
         </Link>
-        <Link className={linkHover} href={"/"}>
+        <Link className={linkHover} href={"/#services"}>
           Services
         </Link>
-        <Link className={linkHover} href={"/"}>
+        <Link className={linkHover} href={"/#team"}>
           Team
         </Link>
-        <Link className={linkHover} href={"/"}>
+        <Link className={linkHover} href={"/#contact"}>
           Contact
         </Link>
       </div>
