@@ -5,19 +5,26 @@ import { introVideo } from "@/lib/links";
 import { CustomLink } from "./CustomLink";
 
 const Hero = () => {
-  // document.querySelector("#contact").scrollIntoView({
-  //   behavior: "smooth",
-  // });
+  const sectionClasses = "relative h-full border-b-4 border-[#cd9a41]";
+  const videoClasses = "absolute inset-0 object-cover w-full h-full";
+  const containerClasses = "secondaryColor relative flex flex-col items-center justify-between font-medium h-full";
+  const titleClasses =
+    "text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[5rem] my-10 text-center sm:flex sm:flex-col sm:items-center text-slate-200 titleShadow leading-tight";
+  const phoneIconClasses = "mr-2 text-[#cd9a41]";
+  const emailIconClasses = "mr-2 text-[#cd9a41]";
+  const linkClasses = "text-white";
+  const pClasses = "font-semibold pr-4 text-white";
+
   return (
-    <section className="relative h-full border-b-4 border-[#cd9a41]">
-      <video autoPlay loop muted className="absolute inset-0 object-cover w-full h-full">
+    <section className={sectionClasses}>
+      <video autoPlay loop muted className={videoClasses}>
         <source src={introVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <div className="secondaryColor relative flex flex-col items-center justify-between font-medium h-full">
+      <div className={containerClasses}>
         <div className="h-screen flex items-center">
-          <h1 className="text-[2.5rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[5rem] my-10 text-center sm:flex sm:flex-col sm:items-center text-slate-200 titleShadow leading-tight">
+          <h1 className={titleClasses}>
             <span className="block">CONSTRUCTING</span>
             <span className="block">WITH</span>
             <span className="block">INTEGRITY </span>
@@ -27,15 +34,15 @@ const Hero = () => {
         </div>
         <div className="flex flex-col justify-center ml-auto">
           <div className="flex items-center mb-2">
-            <HiOutlinePhone className="mr-2 text-[#cd9a41]" />
-            <p className="font-semibold pr-4 text-white">: 713 209-0009</p>
+            <HiOutlinePhone className={phoneIconClasses} />
+            <p className={pClasses}>: 713 209-0009</p>
           </div>
           <div className="flex items-center my-2">
-            <TfiEmail className="mr-2 text-[#cd9a41]" />
-            <p className="font-semibold pr-4 text-white">: El-Zabringo@hotmail.com</p>
+            <TfiEmail className={emailIconClasses} />
+            <p className={pClasses}>: El-Zabringo@hotmail.com</p>
           </div>
           <div className="my-4">
-            <CustomLink href={"#contact"} linkName={"Contact Us"} customCss={"text-white"} />
+            <CustomLink href={"#contact"} linkName={"Contact Us"} customCss={linkClasses} />
           </div>
         </div>
       </div>

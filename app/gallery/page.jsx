@@ -120,7 +120,10 @@ const GalleryPage = () => {
       <h1 className="text-[3.5rem] sm:text-[6rem] text-center underline underline-offset-8 decoration-2 decoration-[#cd9a41] textShadow p-8 mb-10">Gallery</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {albums.map((album, index) => (
-          <div key={album.id} className={`bg-white rounded shadow-md overflow-hidden cursor-pointer flex md:h-80 w-full ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}>
+          <div
+            key={album.id}
+            className={`bg-blue-950 text-white rounded shadow-md overflow-hidden cursor-pointer flex md:h-80 w-full ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}
+          >
             <div className="w-[70%]">
               <Image src={album.coverPhoto} alt={album.title} width={300} height={100} className="w-full h-full" onClick={() => openAlbum(album.id)} />
             </div>

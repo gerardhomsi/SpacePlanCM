@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import imagineIcon from "../public/imagineIcon.png";
 import planIcon from "../public/planIcon.png";
@@ -6,7 +5,7 @@ import buildIcon from "../public/buildIcon.png";
 import Image from "next/image";
 import { CustomLink } from "./CustomLink";
 
-const MissionStep = ({ title, subtitle, content, icon, isSpecial, thirdService }) => (
+const MissionStep = ({ title, subtitle, content, icon }) => (
   <div className={`flex flex-col gap-10 md:flex-row md:items-center md:justify-between md:gap-16 leading-tight w-full`}>
     <div className="border-l-2 border-[#cd9a41] md:max-w-[34%]">
       <h2 className="pl-2 text-left md:-mt-3 text-[3rem] sm:text-[3rem] lg:text-[4rem] xl:text-[6rem] textShadow font-semibold">

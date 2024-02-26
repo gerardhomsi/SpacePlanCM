@@ -18,7 +18,6 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
-import Link from "next/link";
 import { CustomLink } from "./CustomLink";
 
 export default function Page() {
@@ -91,10 +90,10 @@ export default function Page() {
             <SwiperSlide key={index}>
               {index === selectedProjectIndex && (
                 <div className="absolute h-full w-1/2 px-4 bg-blue-950 bg-opacity-70 flex flex-col text-amber-500">
-                  <h1 className="font-bold text-center text-[1.2rem] sm:text-[2.5rem] lg:text-[4.3rem] xl:text-[5.5rem] text-white whitespace-nowrap">
+                  <h1 className="font-bold text-center text-[1.2rem] sm:text-[2.5rem] lg:text-[3.5rem] xl:text-[4.5rem] text-white whitespace-nowrap">
                     {projects[selectedProjectIndex].title}
                   </h1>
-                  <p className="text-[0.7rem] sm:text-[1rem] md:text-[1.2rem] mb-2 sm:px-4 sm:py-2">-{projects[selectedProjectIndex].address}</p>
+                  <p className="text-[0.7rem] sm:text-[1rem] md:text-[1.2rem] sm:px-4 sm:py-2 mb-2">-{projects[selectedProjectIndex].address}</p>
                   <ul className="text-[0.7rem] sm:text-[1rem] md:text-[1.2rem] sm:px-4 sm:py-2">
                     {projects[selectedProjectIndex].tags.map((tag, tagIndex) => (
                       <li key={tagIndex} className="mb-2">
