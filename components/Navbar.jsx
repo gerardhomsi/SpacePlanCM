@@ -54,14 +54,16 @@ const Navbar = () => {
   return (
     <div className={containerClasses}>
       <div className="h-full">
-        <Image
-          src="https://firebasestorage.googleapis.com/v0/b/spaceplancm.appspot.com/o/website%20pics%2Fspbanner.png?alt=media&token=bb485cfa-e250-4a9c-a338-3087e2054c06"
-          alt="banner"
-          width={600}
-          height={10}
-          quality={90}
-          className="w-[20rem] sm:w-[24rem] sm:h-[6rem] md:w-[30rem] md:h-[6rem]"
-        />
+        <Link href={"/"}>
+          <Image
+            src="https://firebasestorage.googleapis.com/v0/b/spaceplancm.appspot.com/o/website%20pics%2Fspbanner.png?alt=media&token=bb485cfa-e250-4a9c-a338-3087e2054c06"
+            alt="banner"
+            width={600}
+            height={10}
+            quality={90}
+            className="w-[20rem] sm:w-[24rem] sm:h-[6rem] md:w-[30rem] md:h-[6rem]"
+          />
+        </Link>
       </div>
       <div className="flex sm:hidden ml-auto">
         <button onClick={toggleMenu} className={menuButtonClasses}>

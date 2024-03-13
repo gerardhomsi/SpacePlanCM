@@ -77,12 +77,11 @@ export default function Page() {
         <Swiper
           loop={true}
           spaceBetween={10}
-          // navigation={true}
           pagination={true}
           thumbs={{
             swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
           }}
-          modules={[FreeMode, Pagination, Thumbs, Navigation]}
+          modules={[FreeMode, Pagination, Thumbs]}
           className="rounded-lg"
           onSlideChange={handleSlideChange}
         >
@@ -109,7 +108,6 @@ export default function Page() {
             </SwiperSlide>
           ))}
         </Swiper>
-
         {/* Thumbnail */}
         <Swiper
           onSwiper={setThumbsSwiper}
@@ -123,7 +121,7 @@ export default function Page() {
         >
           {projects.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="h-full w-full flex flex-col">
+              <div className="h-full w-full flex flex-col cursor-pointer">
                 <Image src={image.imageUrl} alt={image.title} className="block h-full w-full object-cover rounded-xl" />
               </div>
             </SwiperSlide>

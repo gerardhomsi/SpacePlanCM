@@ -13,7 +13,7 @@ export const CustomLink = ({ href, linkName, customCss }) => {
 };
 
 export const ServiceLink = ({ href, serviceName, directionLeft = false, customCss }) => (
-  <div className={`group border-2 border-[#cd9a41] rounded-md px-4 py-2 hover:bg-blue-950 max-w-[14rem] hover:text-[#cd9a41] ${customCss}`}>
+  <div className={`group border-2 border-[#cd9a41] rounded-md px-4 py-2 hover:bg-blue-950 max-w-[18rem] hover:text-[#cd9a41] ${customCss}`}>
     <Link href={href} className="flex items-center justify-evenly gap-2">
       {directionLeft ? (
         <>
